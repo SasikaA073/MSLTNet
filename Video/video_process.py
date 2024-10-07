@@ -3,9 +3,14 @@ import os
 import torch
 import torchvision
 from torchvision import transforms
-from pyramid_structure.Omi_LP import MSLT
+
+import sys
+import os
+
+from MSLTNet.Model.pyramid_structure.Omi_LP import MSLT
+
+
 from torch.utils.data import DataLoader
-import dataset.loaddata as loaddata
 
 def process_video(video_path, output_folder, model_path):
     print("Starting video processing...")
@@ -95,10 +100,20 @@ def process_video(video_path, output_folder, model_path):
 
 if __name__ == "__main__":
     # video_name = "video_1_720p.mp4"
-    video_name = "Nokia 3.4 low-light video recording sample.mp4"
-    video_path = os.path.join("sample_video", video_name)
+    video_files = [file for file in os.listdir("./sample_video") if file.endswith((".mp4", ".avi", ".mov", ".flv", ".mpeg", ".mpg", ".wmv", ".webm", ".mkv"))]
+    
+    for i, v in enumerate(video_files):
+        print(f"{i}: {v}")
+
+    video_index = int(input(("Enter the video number to process: >> ")))
+    video_name = video_files[video_index]
+
+    print("Processing video:", video_name)
+    exit()
+
+    video_path = os.path.join("./sample_video", video_name)
     output_folder = os.path.join("sample_video", f"output_{video_name}")
     os.makedirs(output_folder, exist_ok=True)
     
-    model_path = "pretrained_model/mslt+.pth"
+    model_path = "./pretrained_model/mslt+.pth"
     process_video(video_path, output_folder, model_path)
