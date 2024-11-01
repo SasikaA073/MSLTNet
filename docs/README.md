@@ -47,5 +47,5 @@ python test_model.py
 
 ## Results Comparison
 
-<!-- Embed YouTube video in GitHub README -->
-<iframe width="1080" height="720" src="hhttps://youtu.be/PPaV74Us_Hw" frameborder="0" allowfullscreen></iframe>
+
+https://github.com/user-attachments/assets/1c2ad226-7483-402c-948c-153abcfc4eab
