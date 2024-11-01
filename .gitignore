@@ -1,6 +1,4 @@
 data/
 **/__pycache__/
-sample_video/**.mp4
-sample_video/**.MOV
 
-sample_video/output_folder/*
+sample_video/

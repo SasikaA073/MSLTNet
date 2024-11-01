@@ -121,10 +121,10 @@ if __name__ == "__main__":
     print("Time taken: {:.2f} seconds".format(time.time() - start_time))
 
     # Delete farmes and results folders
-    frames_folder = os.path.join(output_folder, "frames")
-    results_folder = os.path.join(output_folder, "results")
-    os.system(f"rm -r {frames_folder}")
-    os.system(f"rm -r {results_folder}")
+    # frames_folder = os.path.join(output_folder, "frames")
+    # results_folder = os.path.join(output_folder, "results")
+    # os.system(f"rm -r {frames_folder}")
+    # os.system(f"rm -r {results_folder}")
 
     #############################################################################
     # Merge the input and output videos side by side
